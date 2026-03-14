@@ -1,0 +1,1402 @@
+{
+  "page": 549,
+  "font": "QCF4_Hafs_43",
+  "surahs": [
+    {
+      "id": 60,
+      "name": "Al-Mumtahanah",
+      "name_arabic": "الممتحنة",
+      "verse_start": 1,
+      "verse_end": 5
+    }
+  ],
+  "lines": [
+    {
+      "line": 1,
+      "words": [
+        {
+          "code": 61755,
+          "char": "",
+          "font": "QCF4_BSML",
+          "text": "سُورَةُ االمُمْتَحنَةِ بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ",
+          "type": "surah_header",
+          "sura": 60
+        }
+      ]
+    },
+    {
+      "line": 2,
+      "words": [
+        {
+          "code": 63702,
+          "char": "",
+          "font": "QCF4_Hafs_01",
+          "text": "بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ",
+          "type": "bismillah",
+          "sura": 60
+        }
+      ]
+    },
+    {
+      "line": 3,
+      "words": [
+        {
+          "code": 61830,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "يَاأَيُّهَا",
+          "type": "word",
+          "verse_key": "60:1",
+          "position": 1
+        },
+        {
+          "code": 61831,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "الَّذِينَ",
+          "type": "word",
+          "verse_key": "60:1",
+          "position": 2
+        },
+        {
+          "code": 61832,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "ءَامَنُواْ",
+          "type": "word",
+          "verse_key": "60:1",
+          "position": 3
+        },
+        {
+          "code": 61833,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "لَا",
+          "type": "word",
+          "verse_key": "60:1",
+          "position": 4
+        },
+        {
+          "code": 61834,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "تَتَّخِذُواْ",
+          "type": "word",
+          "verse_key": "60:1",
+          "position": 5
+        },
+        {
+          "code": 61835,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "عَدُوِّي",
+          "type": "word",
+          "verse_key": "60:1",
+          "position": 6
+        },
+        {
+          "code": 61836,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "وَعَدُوَّكُمْ",
+          "type": "word",
+          "verse_key": "60:1",
+          "position": 7
+        },
+        {
+          "code": 61837,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "أَوْلِيَاءَ",
+          "type": "word",
+          "verse_key": "60:1",
+          "position": 8
+        },
+        {
+          "code": 61838,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "تُلْقُونَ",
+          "type": "word",
+          "verse_key": "60:1",
+          "position": 9
+        },
+        {
+          "code": 61839,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "إِلَيْهِم",
+          "type": "word",
+          "verse_key": "60:1",
+          "position": 10
+        }
+      ]
+    },
+    {
+      "line": 4,
+      "words": [
+        {
+          "code": 61840,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "بِالْمَوَدَّةِ",
+          "type": "word",
+          "verse_key": "60:1",
+          "position": 11
+        },
+        {
+          "code": 61841,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "وَقَدْ",
+          "type": "word",
+          "verse_key": "60:1",
+          "position": 12
+        },
+        {
+          "code": 61842,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "كَفَرُواْ",
+          "type": "word",
+          "verse_key": "60:1",
+          "position": 13
+        },
+        {
+          "code": 61843,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "بِمَا",
+          "type": "word",
+          "verse_key": "60:1",
+          "position": 14
+        },
+        {
+          "code": 61844,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "جَاءَكُم",
+          "type": "word",
+          "verse_key": "60:1",
+          "position": 15
+        },
+        {
+          "code": 61845,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "مِّنَ",
+          "type": "word",
+          "verse_key": "60:1",
+          "position": 16
+        },
+        {
+          "code": 61846,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "الْحَقِّ",
+          "type": "word",
+          "verse_key": "60:1",
+          "position": 17
+        },
+        {
+          "code": 61847,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "يُخْرِجُونَ",
+          "type": "word",
+          "verse_key": "60:1",
+          "position": 18
+        },
+        {
+          "code": 61848,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "الرَّسُولَ",
+          "type": "word",
+          "verse_key": "60:1",
+          "position": 19
+        },
+        {
+          "code": 61849,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "وَإِيَّاكُمْ",
+          "type": "word",
+          "verse_key": "60:1",
+          "position": 20
+        },
+        {
+          "code": 61850,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "أَن",
+          "type": "word",
+          "verse_key": "60:1",
+          "position": 21
+        }
+      ]
+    },
+    {
+      "line": 5,
+      "words": [
+        {
+          "code": 61851,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "تُؤْمِنُواْ",
+          "type": "word",
+          "verse_key": "60:1",
+          "position": 22
+        },
+        {
+          "code": 61852,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "بِاللَّهِ",
+          "type": "word",
+          "verse_key": "60:1",
+          "position": 23
+        },
+        {
+          "code": 61853,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "رَبِّكُمْ",
+          "type": "word",
+          "verse_key": "60:1",
+          "position": 24
+        },
+        {
+          "code": 61854,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "إِن",
+          "type": "word",
+          "verse_key": "60:1",
+          "position": 25
+        },
+        {
+          "code": 61855,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "كُنتُمْ",
+          "type": "word",
+          "verse_key": "60:1",
+          "position": 26
+        },
+        {
+          "code": 61856,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "خَرَجْتُمْ",
+          "type": "word",
+          "verse_key": "60:1",
+          "position": 27
+        },
+        {
+          "code": 61857,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "جِهَادا",
+          "type": "word",
+          "verse_key": "60:1",
+          "position": 28
+        },
+        {
+          "code": 61858,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "فِي",
+          "type": "word",
+          "verse_key": "60:1",
+          "position": 29
+        },
+        {
+          "code": 61859,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "سَبِيلِي",
+          "type": "word",
+          "verse_key": "60:1",
+          "position": 30
+        },
+        {
+          "code": 61860,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "وَابْتِغَاءَ",
+          "type": "word",
+          "verse_key": "60:1",
+          "position": 31
+        },
+        {
+          "code": 61861,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "مَرْضَاتِي",
+          "type": "word",
+          "verse_key": "60:1",
+          "position": 32
+        }
+      ]
+    },
+    {
+      "line": 6,
+      "words": [
+        {
+          "code": 61863,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "تُسِرُّونَ",
+          "type": "word",
+          "verse_key": "60:1",
+          "position": 33
+        },
+        {
+          "code": 61864,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "إِلَيْهِم",
+          "type": "word",
+          "verse_key": "60:1",
+          "position": 34
+        },
+        {
+          "code": 61865,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "بِالْمَوَدَّةِ",
+          "type": "word",
+          "verse_key": "60:1",
+          "position": 35
+        },
+        {
+          "code": 61866,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "وَأَنَا",
+          "type": "word",
+          "verse_key": "60:1",
+          "position": 36
+        },
+        {
+          "code": 61867,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "أَعْلَمُ",
+          "type": "word",
+          "verse_key": "60:1",
+          "position": 37
+        },
+        {
+          "code": 61868,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "بِمَا",
+          "type": "word",
+          "verse_key": "60:1",
+          "position": 38
+        },
+        {
+          "code": 61869,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "أَخْفَيْتُمْ",
+          "type": "word",
+          "verse_key": "60:1",
+          "position": 39
+        },
+        {
+          "code": 61870,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "وَمَا",
+          "type": "word",
+          "verse_key": "60:1",
+          "position": 40
+        },
+        {
+          "code": 61871,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "أَعْلَنتُمْ",
+          "type": "word",
+          "verse_key": "60:1",
+          "position": 41
+        },
+        {
+          "code": 61873,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "وَمَن",
+          "type": "word",
+          "verse_key": "60:1",
+          "position": 42
+        }
+      ]
+    },
+    {
+      "line": 7,
+      "words": [
+        {
+          "code": 61874,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "يَفْعَلْهُ",
+          "type": "word",
+          "verse_key": "60:1",
+          "position": 43
+        },
+        {
+          "code": 61875,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "مِنكُمْ",
+          "type": "word",
+          "verse_key": "60:1",
+          "position": 44
+        },
+        {
+          "code": 61876,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "فَقَدْ",
+          "type": "word",
+          "verse_key": "60:1",
+          "position": 45
+        },
+        {
+          "code": 61877,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "ضَلَّ",
+          "type": "word",
+          "verse_key": "60:1",
+          "position": 46
+        },
+        {
+          "code": 61878,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "سَوَاءَ",
+          "type": "word",
+          "verse_key": "60:1",
+          "position": 47
+        },
+        {
+          "code": 61879,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "السَّبِيلِ",
+          "type": "word",
+          "verse_key": "60:1",
+          "position": 48
+        },
+        {
+          "code": 61880,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "V1",
+          "type": "end",
+          "verse_key": "60:1",
+          "position": 49
+        },
+        {
+          "code": 61881,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "إِن",
+          "type": "word",
+          "verse_key": "60:2",
+          "position": 1
+        },
+        {
+          "code": 61882,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "يَثْقَفُوكُمْ",
+          "type": "word",
+          "verse_key": "60:2",
+          "position": 2
+        },
+        {
+          "code": 61883,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "يَكُونُواْ",
+          "type": "word",
+          "verse_key": "60:2",
+          "position": 3
+        },
+        {
+          "code": 61884,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "لَكُمْ",
+          "type": "word",
+          "verse_key": "60:2",
+          "position": 4
+        },
+        {
+          "code": 61885,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "أَعْدَاء",
+          "type": "word",
+          "verse_key": "60:2",
+          "position": 5
+        }
+      ]
+    },
+    {
+      "line": 8,
+      "words": [
+        {
+          "code": 61886,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "وَيَبْسُطُواْ",
+          "type": "word",
+          "verse_key": "60:2",
+          "position": 6
+        },
+        {
+          "code": 61887,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "إِلَيْكُمْ",
+          "type": "word",
+          "verse_key": "60:2",
+          "position": 7
+        },
+        {
+          "code": 61888,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "أَيْدِيَهُمْ",
+          "type": "word",
+          "verse_key": "60:2",
+          "position": 8
+        },
+        {
+          "code": 61889,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "وَأَلْسِنَتَهُم",
+          "type": "word",
+          "verse_key": "60:2",
+          "position": 9
+        },
+        {
+          "code": 61890,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "بِالسُّوءِ",
+          "type": "word",
+          "verse_key": "60:2",
+          "position": 10
+        },
+        {
+          "code": 61891,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "وَوَدُّواْ",
+          "type": "word",
+          "verse_key": "60:2",
+          "position": 11
+        },
+        {
+          "code": 61892,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "لَوْ",
+          "type": "word",
+          "verse_key": "60:2",
+          "position": 12
+        },
+        {
+          "code": 61893,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "تَكْفُرُونَ",
+          "type": "word",
+          "verse_key": "60:2",
+          "position": 13
+        },
+        {
+          "code": 61894,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "V2",
+          "type": "end",
+          "verse_key": "60:2",
+          "position": 14
+        }
+      ]
+    },
+    {
+      "line": 9,
+      "words": [
+        {
+          "code": 61895,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "لَن",
+          "type": "word",
+          "verse_key": "60:3",
+          "position": 1
+        },
+        {
+          "code": 61896,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "تَنفَعَكُمْ",
+          "type": "word",
+          "verse_key": "60:3",
+          "position": 2
+        },
+        {
+          "code": 61897,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "أَرْحَامُكُمْ",
+          "type": "word",
+          "verse_key": "60:3",
+          "position": 3
+        },
+        {
+          "code": 61898,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "وَلَا",
+          "type": "word",
+          "verse_key": "60:3",
+          "position": 4
+        },
+        {
+          "code": 61899,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "أَوْلَادُكُمْ",
+          "type": "word",
+          "verse_key": "60:3",
+          "position": 5
+        },
+        {
+          "code": 61901,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "يَوْمَ",
+          "type": "word",
+          "verse_key": "60:3",
+          "position": 6
+        },
+        {
+          "code": 61902,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "الْقِيَامَةِ",
+          "type": "word",
+          "verse_key": "60:3",
+          "position": 7
+        },
+        {
+          "code": 61903,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "يَفْصِلُ",
+          "type": "word",
+          "verse_key": "60:3",
+          "position": 8
+        },
+        {
+          "code": 61904,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "بَيْنَكُمْ",
+          "type": "word",
+          "verse_key": "60:3",
+          "position": 9
+        },
+        {
+          "code": 61906,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "وَاللَّهُ",
+          "type": "word",
+          "verse_key": "60:3",
+          "position": 10
+        }
+      ]
+    },
+    {
+      "line": 10,
+      "words": [
+        {
+          "code": 61907,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "بِمَا",
+          "type": "word",
+          "verse_key": "60:3",
+          "position": 11
+        },
+        {
+          "code": 61908,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "تَعْمَلُونَ",
+          "type": "word",
+          "verse_key": "60:3",
+          "position": 12
+        },
+        {
+          "code": 61909,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "بَصِيرٌ",
+          "type": "word",
+          "verse_key": "60:3",
+          "position": 13
+        },
+        {
+          "code": 61910,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "V3",
+          "type": "end",
+          "verse_key": "60:3",
+          "position": 14
+        },
+        {
+          "code": 61911,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "قَدْ",
+          "type": "word",
+          "verse_key": "60:4",
+          "position": 1
+        },
+        {
+          "code": 61912,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "كَانَتْ",
+          "type": "word",
+          "verse_key": "60:4",
+          "position": 2
+        },
+        {
+          "code": 61913,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "لَكُمْ",
+          "type": "word",
+          "verse_key": "60:4",
+          "position": 3
+        },
+        {
+          "code": 61914,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "أُسْوَةٌ",
+          "type": "word",
+          "verse_key": "60:4",
+          "position": 4
+        },
+        {
+          "code": 61915,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "حَسَنَةٌ",
+          "type": "word",
+          "verse_key": "60:4",
+          "position": 5
+        },
+        {
+          "code": 61916,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "فِي",
+          "type": "word",
+          "verse_key": "60:4",
+          "position": 6
+        },
+        {
+          "code": 61917,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "إِبْرَاهِيمَ",
+          "type": "word",
+          "verse_key": "60:4",
+          "position": 7
+        },
+        {
+          "code": 61918,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "وَالَّذِينَ",
+          "type": "word",
+          "verse_key": "60:4",
+          "position": 8
+        }
+      ]
+    },
+    {
+      "line": 11,
+      "words": [
+        {
+          "code": 61919,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "مَعَهُ",
+          "type": "word",
+          "verse_key": "60:4",
+          "position": 9
+        },
+        {
+          "code": 61920,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "إِذْ",
+          "type": "word",
+          "verse_key": "60:4",
+          "position": 10
+        },
+        {
+          "code": 61921,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "قَالُواْ",
+          "type": "word",
+          "verse_key": "60:4",
+          "position": 11
+        },
+        {
+          "code": 61922,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "لِقَوْمِهِمْ",
+          "type": "word",
+          "verse_key": "60:4",
+          "position": 12
+        },
+        {
+          "code": 61923,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "إِنَّا",
+          "type": "word",
+          "verse_key": "60:4",
+          "position": 13
+        },
+        {
+          "code": 61924,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "بُرَءَاؤُاْ",
+          "type": "word",
+          "verse_key": "60:4",
+          "position": 14
+        },
+        {
+          "code": 61925,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "مِنكُمْ",
+          "type": "word",
+          "verse_key": "60:4",
+          "position": 15
+        },
+        {
+          "code": 61926,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "وَمِمَّا",
+          "type": "word",
+          "verse_key": "60:4",
+          "position": 16
+        },
+        {
+          "code": 61927,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "تَعْبُدُونَ",
+          "type": "word",
+          "verse_key": "60:4",
+          "position": 17
+        },
+        {
+          "code": 61928,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "مِن",
+          "type": "word",
+          "verse_key": "60:4",
+          "position": 18
+        },
+        {
+          "code": 61929,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "دُونِ",
+          "type": "word",
+          "verse_key": "60:4",
+          "position": 19
+        },
+        {
+          "code": 61930,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "اللَّهِ",
+          "type": "word",
+          "verse_key": "60:4",
+          "position": 20
+        }
+      ]
+    },
+    {
+      "line": 12,
+      "words": [
+        {
+          "code": 61931,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "كَفَرْنَا",
+          "type": "word",
+          "verse_key": "60:4",
+          "position": 21
+        },
+        {
+          "code": 61932,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "بِكُمْ",
+          "type": "word",
+          "verse_key": "60:4",
+          "position": 22
+        },
+        {
+          "code": 61933,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "وَبَدَا",
+          "type": "word",
+          "verse_key": "60:4",
+          "position": 23
+        },
+        {
+          "code": 61934,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "بَيْنَنَا",
+          "type": "word",
+          "verse_key": "60:4",
+          "position": 24
+        },
+        {
+          "code": 61935,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "وَبَيْنَكُمُ",
+          "type": "word",
+          "verse_key": "60:4",
+          "position": 25
+        },
+        {
+          "code": 61936,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "الْعَدَاوَةُ",
+          "type": "word",
+          "verse_key": "60:4",
+          "position": 26
+        },
+        {
+          "code": 61937,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "وَالْبَغْضَاءُ",
+          "type": "word",
+          "verse_key": "60:4",
+          "position": 27
+        },
+        {
+          "code": 61938,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "أَبَدًا",
+          "type": "word",
+          "verse_key": "60:4",
+          "position": 28
+        },
+        {
+          "code": 61939,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "حَتَّى",
+          "type": "word",
+          "verse_key": "60:4",
+          "position": 29
+        },
+        {
+          "code": 61940,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "تُؤْمِنُواْ",
+          "type": "word",
+          "verse_key": "60:4",
+          "position": 30
+        }
+      ]
+    },
+    {
+      "line": 13,
+      "words": [
+        {
+          "code": 61941,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "بِاللَّهِ",
+          "type": "word",
+          "verse_key": "60:4",
+          "position": 31
+        },
+        {
+          "code": 61942,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "وَحْدَهُ",
+          "type": "word",
+          "verse_key": "60:4",
+          "position": 32
+        },
+        {
+          "code": 61943,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "إِلَّا",
+          "type": "word",
+          "verse_key": "60:4",
+          "position": 33
+        },
+        {
+          "code": 61944,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "قَوْلَ",
+          "type": "word",
+          "verse_key": "60:4",
+          "position": 34
+        },
+        {
+          "code": 61945,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "إِبْرَاهِيمَ",
+          "type": "word",
+          "verse_key": "60:4",
+          "position": 35
+        },
+        {
+          "code": 61946,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "لِأَبِيهِ",
+          "type": "word",
+          "verse_key": "60:4",
+          "position": 36
+        },
+        {
+          "code": 61947,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "لَأَسْتَغْفِرَنَّ",
+          "type": "word",
+          "verse_key": "60:4",
+          "position": 37
+        },
+        {
+          "code": 61948,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "لَكَ",
+          "type": "word",
+          "verse_key": "60:4",
+          "position": 38
+        },
+        {
+          "code": 61949,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "وَمَا",
+          "type": "word",
+          "verse_key": "60:4",
+          "position": 39
+        },
+        {
+          "code": 61950,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "أَمْلِكُ",
+          "type": "word",
+          "verse_key": "60:4",
+          "position": 40
+        },
+        {
+          "code": 61951,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "لَكَ",
+          "type": "word",
+          "verse_key": "60:4",
+          "position": 41
+        },
+        {
+          "code": 61952,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "مِنَ",
+          "type": "word",
+          "verse_key": "60:4",
+          "position": 42
+        }
+      ]
+    },
+    {
+      "line": 14,
+      "words": [
+        {
+          "code": 61953,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "اللَّهِ",
+          "type": "word",
+          "verse_key": "60:4",
+          "position": 43
+        },
+        {
+          "code": 61954,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "مِن",
+          "type": "word",
+          "verse_key": "60:4",
+          "position": 44
+        },
+        {
+          "code": 61955,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "شَيْءٍ",
+          "type": "word",
+          "verse_key": "60:4",
+          "position": 45
+        },
+        {
+          "code": 61957,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "رَّبَّنَا",
+          "type": "word",
+          "verse_key": "60:4",
+          "position": 46
+        },
+        {
+          "code": 61958,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "عَلَيْكَ",
+          "type": "word",
+          "verse_key": "60:4",
+          "position": 47
+        },
+        {
+          "code": 61959,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "تَوَكَّلْنَا",
+          "type": "word",
+          "verse_key": "60:4",
+          "position": 48
+        },
+        {
+          "code": 61960,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "وَإِلَيْكَ",
+          "type": "word",
+          "verse_key": "60:4",
+          "position": 49
+        },
+        {
+          "code": 61961,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "أَنَبْنَا",
+          "type": "word",
+          "verse_key": "60:4",
+          "position": 50
+        },
+        {
+          "code": 61962,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "وَإِلَيْكَ",
+          "type": "word",
+          "verse_key": "60:4",
+          "position": 51
+        },
+        {
+          "code": 61963,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "الْمَصِيرُ",
+          "type": "word",
+          "verse_key": "60:4",
+          "position": 52
+        },
+        {
+          "code": 61964,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "V4",
+          "type": "end",
+          "verse_key": "60:4",
+          "position": 53
+        },
+        {
+          "code": 61965,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "رَبَّنَا",
+          "type": "word",
+          "verse_key": "60:5",
+          "position": 1
+        }
+      ]
+    },
+    {
+      "line": 15,
+      "words": [
+        {
+          "code": 61966,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "لَا",
+          "type": "word",
+          "verse_key": "60:5",
+          "position": 2
+        },
+        {
+          "code": 61967,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "تَجْعَلْنَا",
+          "type": "word",
+          "verse_key": "60:5",
+          "position": 3
+        },
+        {
+          "code": 61968,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "فِتْنَة",
+          "type": "word",
+          "verse_key": "60:5",
+          "position": 4
+        },
+        {
+          "code": 61969,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "لِّلَّذِينَ",
+          "type": "word",
+          "verse_key": "60:5",
+          "position": 5
+        },
+        {
+          "code": 61970,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "كَفَرُواْ",
+          "type": "word",
+          "verse_key": "60:5",
+          "position": 6
+        },
+        {
+          "code": 61971,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "وَاغْفِرْ",
+          "type": "word",
+          "verse_key": "60:5",
+          "position": 7
+        },
+        {
+          "code": 61972,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "لَنَا",
+          "type": "word",
+          "verse_key": "60:5",
+          "position": 8
+        },
+        {
+          "code": 61973,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "رَبَّنَا",
+          "type": "word",
+          "verse_key": "60:5",
+          "position": 9
+        },
+        {
+          "code": 61975,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "إِنَّكَ",
+          "type": "word",
+          "verse_key": "60:5",
+          "position": 10
+        },
+        {
+          "code": 61976,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "أَنتَ",
+          "type": "word",
+          "verse_key": "60:5",
+          "position": 11
+        },
+        {
+          "code": 61977,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "الْعَزِيزُ",
+          "type": "word",
+          "verse_key": "60:5",
+          "position": 12
+        },
+        {
+          "code": 61978,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "الْحَكِيمُ",
+          "type": "word",
+          "verse_key": "60:5",
+          "position": 13
+        },
+        {
+          "code": 61979,
+          "char": "",
+          "font": "QCF4_Hafs_43",
+          "text": "V5",
+          "type": "end",
+          "verse_key": "60:5",
+          "position": 14
+        }
+      ]
+    }
+  ]
+}

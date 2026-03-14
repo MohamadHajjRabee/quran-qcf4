@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>أبا مُحمَّد — أحمَد الغَريب</title>
+
+    <!-- PWA Settings -->
+    <link rel="manifest" href="./manifest.json">
+    <meta name="theme-color" content="#F8F3EB">
+    <link rel="icon" type="image/jpeg" href="./IMG_8030.JPEG">
+    <link rel="apple-touch-icon" href="./IMG_8030.JPEG">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="الناسخ">
+
+    <!-- FontAwesome for Premium Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Preload critical font for instant rendering -->
+    <link rel="preload" href="./fonts/QCF4_Hafs_01_W.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Hero Section — Completely Redesigned -->
+        <header class="hero-section" id="heroSection">
+
+            <!-- Top Identity Bar: Logo + Name + Dark Mode Toggle -->
+            <div class="hero-identity-bar hero-anim" id="heroVisual">
+                <img src="./IMG_8030.JPEG" alt="شعار أبا محمد" class="hero-logo-img">
+                <div class="hero-identity-text">
+                    <span class="hero-identity-name">
+                        أحمَد الغَريب
+                        <i class="fa-solid fa-circle-check"
+                            style="color: #1DA1F2; font-size: 0.85em; margin-right: 5px;"></i>
+                    </span>
+                    <span class="hero-identity-label" style="font-size: 0.75rem; opacity: 0.7;">أبا مُحمَّد</span>
+                </div>
+                <button class="theme-toggle" id="themeToggle" aria-label="تبديل الوضع الليلي" title="الوضع الليلي">
+                    <i class="fa-solid fa-moon" id="themeIcon"></i>
+                </button>
+                <a href="https://linktr.ee/am9li9" target="_blank" class="social-link-btn" aria-label="جميع الحسابات"
+                    title="جميع الحسابات">
+                    <i class="fa-solid fa-link"></i>
+                </a>
+            </div>
+
+            <!-- Main Hero Content (Compact Redesigned) -->
+            <div class="hero-container">
+                <h1 class="hero-new-title hero-anim" id="heroTitle">يَارَبِّ رِضَاكَ وَالجَنَّةَ</h1>
+
+                <p class="hero-new-desc hero-anim" id="heroLead">
+                    المَوْقِعُ الرَّسْمِيُّ لِأَحْمَدَ الغَرِيب لِنَسْخِ القُرْآنِ الكَرِيمِ
+                </p>
+
+                <div class="hero-new-doa hero-anim" id="heroDoa">
+                    <i class="fa-solid fa-kaaba"></i>
+                    <span>نَسْأَلُ اللَّهَ تَعَالَى أَنْ يَرْزُقَنَا مُرَافَقَةَ النَّبِيِّ مُحَمَّدٍ ﷺ فِي الفِرْدَوْسِ
+                        الأَعْلَى.</span>
+                </div>
+
+                <!-- Channel Chips Area -->
+                <div class="hero-channel-chips hero-anim" id="heroTgLinks">
+                    <a href="https://t.me/quranfont" target="_blank" class="channel-chip channel-chip-primary">
+                        <i class="fa-brands fa-telegram"></i>
+                        <span>خطوط قرآن</span>
+                    </a>
+                    <a href="https://t.me/ElgharibFont" target="_blank" class="channel-chip">
+                        <i class="fa-brands fa-telegram"></i>
+                        <span>الخطوط العامة</span>
+                    </a>
+                    <a href="https://t.me/ElgharibFonts" target="_blank" class="channel-chip">
+                        <i class="fa-solid fa-comments"></i>
+                        <span>نقاشات خطوط أحمد</span>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Visitor Counter -->
+        <div class="visitor-counter-wrap fade-up-target" id="visitorSection">
+            <div class="visitor-counter" id="visitorCounter">
+                <span class="vc-dot"></span>
+                <span>عدد الزوار الكلي:</span>
+                <span class="vc-num" id="visitorCount">0</span>
+            </div>
+        </div>
+
+        <!-- Glassmorphism Control Panel -->
+        <div class="controls fade-up-target" id="controlsSection">
+            <div class="controls-row">
+                <div class="form-group" style="flex: 2;">
+                    <label for="searchInput"><i class="fa-solid fa-magnifying-glass"></i> بحث دقيق عن كلمة أو
+                        آية</label>
+                    <input type="text" id="searchInput" placeholder="اكتب كلمة للبحث كـ 'الرحمن'..."
+                        autocomplete="off" />
+                </div>
+                <div class="form-group" style="flex: 1;">
+                    <label for="pageSelect"><i class="fa-solid fa-file-lines"></i> اختيار الصفحة</label>
+                    <select id="pageSelect">
+                        <option value="" disabled selected>جاري تحميل المصحف...</option>
+                    </select>
+                </div>
+            </div>
+            <!-- Surah + Verse Lookup Row -->
+            <div class="surah-verse-row">
+                <div class="form-group surah-verse-group">
+                    <label><i class="fa-solid fa-book-open"></i> البحث بالسورة ورقم الآية</label>
+                    <div class="surah-verse-controls">
+                        <div class="sv-select-wrap">
+                            <select id="surahSelect">
+                                <option value="" disabled selected>اختر السورة</option>
+                            </select>
+                        </div>
+                        <div class="sv-select-wrap">
+                            <select id="verseSelect" disabled>
+                                <option value="" disabled selected>رقم الآية</option>
+                            </select>
+                        </div>
+                        <button class="sv-go-btn" id="svGoBtn" disabled>
+                            <i class="fa-solid fa-arrow-left"></i>
+                            <span>عرض</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Voice Search Row -->
+            <div class="voice-search-row">
+                <div class="voice-search-group">
+                    <label><i class="fa-solid fa-microphone"></i> البحث الصوتي</label>
+                    <div class="voice-search-box">
+                        <button class="voice-btn" id="voiceSearchBtn" aria-label="البحث الصوتي" title="اضغط للتحدث">
+                            <span class="voice-btn-icon" id="voiceBtnIcon">
+                                <i class="fa-solid fa-microphone"></i>
+                            </span>
+                            <span class="voice-btn-rings" id="voiceRings">
+                                <span class="voice-ring"></span>
+                                <span class="voice-ring"></span>
+                                <span class="voice-ring"></span>
+                            </span>
+                        </button>
+                        <div class="voice-status" id="voiceStatus">اضغط على الزر وتحدث بالآية أو السورة</div>
+                        <div class="voice-transcript" id="voiceTranscript" style="display: none;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="loading"><i class="fa-solid fa-spinner fa-spin"></i> جاري التحضير...</div>
+
+        <!-- Full page results area -->
+        <div id="results"></div>
+    </div>
+
+    <!-- Search Results Overlay -->
+    <div id="searchResultsOverlay" class="search-overlay">
+        <div class="search-overlay-header">
+            <div class="overlay-search-container">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="overlaySearchInput" placeholder="اكتب كلمة أو آية للبحث..." autocomplete="off" />
+            </div>
+            <button id="closeSearchBtn" class="close-search-btn" aria-label="إغلاق البحث" title="إغلاق">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <div class="search-overlay-scrollable">
+            <h2 id="searchTitle" style="display: none;"><i class="fa-solid fa-list-check"></i> نتائج البحث:</h2>
+            <div id="searchResults" class="search-overlay-content"></div>
+        </div>
+    </div>
+
+    <!-- Footer Area -->
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- Telegram -->
+            <div class="social-section">
+                <h3><i class="fa-brands fa-telegram" style="color:#0088cc;"></i> باقة قنوات تليجرام</h3>
+                <ul>
+                    <li><a href="https://t.me/Elgharibi/983" target="_blank">باقة قنوات أحمد الغريب</a></li>
+                    <li><a href="https://t.me/iElgharibBot" target="_blank">روبوت الشكاوى والاقتراحات</a></li>
+                    <li><a href="https://t.me/Am9li9" target="_blank">الرسائل المباشرة مع المدير</a></li>
+                    <li><a href="https://t.me/ElgharibFonts" target="_blank">نقاشات خطوط أحمد الغريب</a></li>
+                </ul>
+            </div>
+
+            <!-- YouTube & Instagram -->
+            <div class="social-section">
+                <h3><i class="fa-solid fa-video" style="color:#ff0000;"></i> الميديا والشبكات</h3>
+                <ul>
+                    <li><a href="https://youtube.com/@am9li9" target="_blank"><i class="fa-brands fa-youtube"
+                                style="color:#ff0000;"></i> قناة اليوتيوب الرسمية</a></li>
+                    <li><a href="https://www.instagram.com/am9li9" target="_blank"><i class="fa-brands fa-instagram"
+                                style="color:#e1306c;"></i> حساب إنستجرام</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-simple-content">
+            <p>جميع حقوق ملفات الخط محفوظة لمجمع الملك فهد.</p>
+            <p>برمجة الموقع وإنتاج الفكرة أحمد الغريب</p>
+        </div>
+    </footer>
+
+    <!-- ═══════════════════════════════════════════════════════════
+         FULL-SCREEN PAGE VIEWER OVERLAY
+         ═══════════════════════════════════════════════════════════ -->
+    <div id="pageViewerOverlay" class="page-viewer-overlay">
+        <!-- Sticky Top Toolbar -->
+        <div class="pv-toolbar">
+            <div class="pv-toolbar-row">
+                <!-- Close Button -->
+                <button class="pv-close-btn" id="pvCloseBtn" aria-label="إغلاق" title="إغلاق العارض">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+
+                <!-- Page Title -->
+                <div class="pv-title" id="pvTitle">
+                    <i class="fa-solid fa-book-quran"></i>
+                    <span id="pvTitleText">الصفحة ١</span>
+                </div>
+
+                <!-- Font Info -->
+                <div class="pv-font-info" id="pvFontInfo">
+                    <i class="fa-solid fa-font"></i>
+                    اسم ملف الخط المطلوب: <b id="pvFontName">QCF4_Hafs_01_W</b>
+                </div>
+            </div>
+
+            <div class="pv-toolbar-row pv-toolbar-controls">
+                <!-- Navigation -->
+                <div class="pv-nav-group">
+                    <button class="pv-nav-btn" id="pvNextPage" title="الصفحة التالية">
+                        <i class="fa-solid fa-chevron-right"></i>
+                    </button>
+                    <div class="pv-page-select-wrap">
+                        <select id="pvPageSelect" class="pv-page-select">
+                            <option value="" disabled selected>اختر صفحة</option>
+                        </select>
+                    </div>
+                    <button class="pv-nav-btn" id="pvPrevPage" title="الصفحة السابقة">
+                        <i class="fa-solid fa-chevron-left"></i>
+                    </button>
+                </div>
+
+                <!-- Search in viewer -->
+                <div class="pv-search-group">
+                    <div class="pv-search-input-wrap">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" id="pvSearchInput" class="pv-search-input" placeholder="بحث عن آية..."
+                            autocomplete="off" />
+                    </div>
+                </div>
+
+                <!-- Copy Button -->
+                <button class="pv-action-btn pv-copy-btn" id="pvCopyBtn" title="نسخ رموز الصفحة">
+                    <i class="fa-solid fa-copy"></i>
+                    <span>نسخ الصفحة</span>
+                </button>
+            </div>
+
+            <!-- Search Results Dropdown -->
+            <div class="pv-search-results" id="pvSearchResults" style="display: none;"></div>
+        </div>
+
+        <!-- Page Content Area -->
+        <div class="pv-content" id="pvContent">
+            <div class="pv-page-card" id="pvPageCard">
+                <div class="qcf-text-area pv-qcf-text" id="pvQcfText" dir="rtl"></div>
+            </div>
+        </div>
+
+        <!-- Bottom Page Navigation (Mobile-friendly) -->
+        <div class="pv-bottom-nav">
+            <button class="pv-bottom-btn" id="pvBottomNext">
+                <i class="fa-solid fa-chevron-right"></i>
+                <span>التالية</span>
+            </button>
+            <div class="pv-bottom-page-num" id="pvBottomPageNum">١ / ٦٠٤</div>
+            <button class="pv-bottom-btn" id="pvBottomPrev">
+                <span>السابقة</span>
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+        </div>
+    </div>
+
+    <div class="toast" id="toast"><i class="fa-solid fa-circle-check"></i> تم التحديث بنجاح!</div>
+
+    <!-- Load data files -->
+    <script src="./hafs_pages.js" defer></script>
+    <script src="./hafs_verses.js" defer></script>
+
+    <!-- Load Logics -->
+    <script src="./main.js" defer></script>
+
+    <!-- Dark Mode Toggle (standalone, does not touch main.js) -->
+    <script>
+        (function () {
+            const btn = document.getElementById('themeToggle');
+            const icon = document.getElementById('themeIcon');
+            const KEY = 'quran-copier-theme';
+
+            function applyTheme(dark) {
+                document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+                icon.className = dark ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
+                localStorage.setItem(KEY, dark ? 'dark' : 'light');
+            }
+
+            // Init from saved preference
+            const saved = localStorage.getItem(KEY);
+            if (saved === 'dark') applyTheme(true);
+
+            btn.addEventListener('click', function () {
+                const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+                applyTheme(!isDark);
+            });
+        })();
+    </script>
+<!-- Cloudflare Pages Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "e1e03323a15a4d4c8fbd710ecb8f4d3b"}'></script><!-- Cloudflare Pages Analytics --></body>
+
+</html>
