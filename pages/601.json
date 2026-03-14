@@ -31,7 +31,7 @@
         {
           "code": 61798,
           "char": "",
-          "font": "QCF4_BSML",
+          "font": "QCF4_QBSML",
           "text": "سُورَةُ االعَصْرِ بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ",
           "type": "surah_header",
           "sura": 103
@@ -220,7 +220,7 @@
         {
           "code": 61799,
           "char": "",
-          "font": "QCF4_BSML",
+          "font": "QCF4_QBSML",
           "text": "سُورَةُ االهُمَزَةِ بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ",
           "type": "surah_header",
           "sura": 104
@@ -644,7 +644,7 @@
         {
           "code": 61800,
           "char": "",
-          "font": "QCF4_BSML",
+          "font": "QCF4_QBSML",
           "text": "سُورَةُ االفِيلِ بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ",
           "type": "surah_header",
           "sura": 105

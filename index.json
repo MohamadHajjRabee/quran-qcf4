@@ -6,7 +6,7 @@
     "total_verses": 6236,
     "font_count": 47,
     "font_prefix": "QCF4_Hafs_",
-    "bismillah_font": "QCF4_BSML",
+    "bismillah_font": "QCF4_QBSML",
     "description": "QCF4 Quran glyph database for Hafs recitation. Each page JSON contains word-level glyph data organized by lines.",
     "files": {
       "pages": "pages/{NNN}.json",

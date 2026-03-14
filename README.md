@@ -65,7 +65,7 @@ Each `pages/NNN.json` file represents one Mushaf page:
         {
           "code": 61696,
           "char": "\uF100",
-          "font": "QCF4_BSML",
+          "font": "QCF4_QBSML",
           "text": "سُورَةُ الفَاتِحَةِ",
           "type": "surah_header",
           "sura": 1
@@ -97,7 +97,7 @@ Each `pages/NNN.json` file represents one Mushaf page:
 |------|-------------|
 | `word` | Quranic word — has `verse_key` and `position` |
 | `end` | Verse-end marker (circled number) — has `verse_key` and `position` |
-| `surah_header` | Surah title banner — has `sura`, uses `QCF4_BSML` font |
+| `surah_header` | Surah title banner — has `sura`, uses `QCF4_QBSML` font |
 | `bismillah` | Bismillah glyph — has `sura`, uses `QCF4_Hafs_01` font |
 | `quarter` | Quarter-hizb marker (۞) |
 
@@ -151,7 +151,7 @@ Each page uses one main font. Load it via CSS `@font-face`:
   src: url("fonts/QCF4_Hafs_01_W.ttf");
 }
 @font-face {
-  font-family: "QCF4_BSML";
+  font-family: "QCF4_QBSML";
   src: url("fonts/QCF4_QBSML.ttf");
 }
 ```
