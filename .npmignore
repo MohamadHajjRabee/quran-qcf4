@@ -1,12 +1,8 @@
-# Exclude the demo file
+fonts/
 demo.html
 GITHUB-SETUP.md
-
-# Exclude git files
 .git/
 .gitignore
 .gitattributes
-
-# Exclude CI/tooling
 .github/
 *.log
