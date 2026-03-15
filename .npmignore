@@ -1,0 +1,12 @@
+# Exclude the demo file
+demo.html
+GITHUB-SETUP.md
+
+# Exclude git files
+.git/
+.gitignore
+.gitattributes
+
+# Exclude CI/tooling
+.github/
+*.log

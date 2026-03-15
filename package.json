@@ -1,0 +1,47 @@
+{
+  "name": "quran-qcf4",
+  "version": "1.0.0",
+  "description": "Developer-friendly Quran database using QCF v4 (King Fahd Complex Font) with Hafs recitation — includes fonts, page JSON, verse index, and font map.",
+  "keywords": [
+    "quran",
+    "qcf",
+    "qcf4",
+    "mushaf",
+    "arabic",
+    "islam",
+    "font",
+    "hafs",
+    "madinah",
+    "uthman-taha",
+    "quran-font",
+    "quran-data"
+  ],
+  "author": "Mohamad Hajj Rabee",
+  "license": "SEE LICENSE IN LICENSE.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MohamadHajjRabee/quran-qcf4.git"
+  },
+  "homepage": "https://github.com/MohamadHajjRabee/quran-qcf4#readme",
+  "bugs": {
+    "url": "https://github.com/MohamadHajjRabee/quran-qcf4/issues"
+  },
+  "files": [
+    "fonts/",
+    "fonts-woff2/",
+    "pages/",
+    "index.json",
+    "verses.json",
+    "font-map.json",
+    "README.md"
+  ],
+  "main": "index.json",
+  "exports": {
+    ".": "./index.json",
+    "./verses": "./verses.json",
+    "./font-map": "./font-map.json",
+    "./pages/*": "./pages/*.json",
+    "./fonts/*": "./fonts/*",
+    "./fonts-woff2/*": "./fonts-woff2/*"
+  }
+}

@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QCF4 Quran Demo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lateef:wght@400;700&family=Noto+Naskh+Arabic:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg:        #0d1117;
+      --surface:   #161b22;
+      --border:    #2a3040;
+      --gold:      #c9a84c;
+      --gold-dim:  #7a6030;
+      --gold-glow: rgba(201,168,76,0.15);
+      --text:      #e8dfc8;
+      --text-dim:  #8b7d60;
+      --green:     #1a6b4a;
+      --green-light: #2ecc8a;
+      --radius:    12px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Noto Naskh Arabic', serif;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* ── Starfield background ── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        radial-gradient(1px 1px at 10% 20%, rgba(201,168,76,0.4) 0%, transparent 100%),
+        radial-gradient(1px 1px at 80% 10%, rgba(201,168,76,0.3) 0%, transparent 100%),
+        radial-gradient(1px 1px at 30% 70%, rgba(201,168,76,0.2) 0%, transparent 100%),
+        radial-gradient(1px 1px at 90% 80%, rgba(201,168,76,0.3) 0%, transparent 100%),
+        radial-gradient(1px 1px at 50% 50%, rgba(201,168,76,0.15) 0%, transparent 100%),
+        radial-gradient(1px 1px at 70% 40%, rgba(201,168,76,0.2) 0%, transparent 100%),
+        radial-gradient(1px 1px at 20% 90%, rgba(201,168,76,0.25) 0%, transparent 100%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ── Layout ── */
+    .shell {
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    /* ── Header ── */
+    header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .badge {
+      display: inline-block;
+      font-family: monospace;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      border: 1px solid var(--gold-dim);
+      padding: 4px 12px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+      background: var(--gold-glow);
+    }
+
+    h1 {
+      font-family: 'Lateef', serif;
+      font-size: clamp(2rem, 6vw, 3.5rem);
+      color: var(--gold);
+      letter-spacing: 1px;
+      text-shadow: 0 0 40px rgba(201,168,76,0.3);
+      margin-bottom: 8px;
+      direction: rtl;
+    }
+
+    .subtitle {
+      font-size: 13px;
+      color: var(--text-dim);
+      letter-spacing: 1px;
+      font-family: monospace;
+      direction: ltr;
+    }
+
+    /* ── Controls ── */
+    .controls {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 32px;
+      align-items: center;
+      flex-wrap: wrap;
+      direction: ltr;
+    }
+
+    .controls label {
+      font-size: 12px;
+      color: var(--text-dim);
+      letter-spacing: 1px;
+      font-family: monospace;
+      text-transform: uppercase;
+    }
+
+    .controls select, .controls input[type=range] {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text);
+      border-radius: 6px;
+      padding: 6px 10px;
+      font-size: 13px;
+      font-family: monospace;
+      cursor: pointer;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .controls select:hover,
+    .controls select:focus {
+      border-color: var(--gold-dim);
+    }
+
+    .size-display {
+      font-family: monospace;
+      font-size: 12px;
+      color: var(--gold);
+      min-width: 36px;
+    }
+
+    /* ── Mushaf card ── */
+    .mushaf-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow:
+        0 0 0 1px rgba(201,168,76,0.05),
+        0 20px 60px rgba(0,0,0,0.5),
+        inset 0 1px 0 rgba(201,168,76,0.08);
+    }
+
+    .card-topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 20px;
+      border-bottom: 1px solid var(--border);
+      direction: ltr;
+    }
+
+    .dots { display: flex; gap: 6px; }
+    .dot {
+      width: 10px; height: 10px;
+      border-radius: 50%;
+      background: var(--border);
+    }
+    .dot:nth-child(1) { background: #ff5f57; }
+    .dot:nth-child(2) { background: #ffbd2e; }
+    .dot:nth-child(3) { background: #28c840; }
+
+    .card-title {
+      font-family: monospace;
+      font-size: 11px;
+      color: var(--text-dim);
+      letter-spacing: 1px;
+    }
+
+    .page-badge {
+      font-family: monospace;
+      font-size: 11px;
+      color: var(--gold);
+      background: var(--gold-glow);
+      border: 1px solid var(--gold-dim);
+      padding: 2px 8px;
+      border-radius: 10px;
+    }
+
+    /* ── Page render area ── */
+    #page-render {
+      padding: 40px 32px;
+      min-height: 400px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2px;
+    }
+
+    .mushaf-line {
+      display: flex;
+      flex-direction: row;
+      direction: rtl;
+      justify-content: center;
+      width: 100%;
+      flex-wrap: nowrap;
+      gap: 0;
+    }
+
+    .mushaf-word {
+      display: inline-block;
+      transition: color 0.15s, background 0.15s;
+      cursor: default;
+      padding: 0 1px;
+      border-radius: 3px;
+      line-height: 1.9;
+    }
+
+    .mushaf-word:hover {
+      color: var(--gold);
+      background: var(--gold-glow);
+    }
+
+    .mushaf-word.type-surah_header {
+      color: var(--gold);
+      display: block;
+      text-align: center;
+      width: 100%;
+      margin: 8px 0;
+      font-size: 2em !important;
+    }
+
+    .mushaf-word.type-end {
+      color: var(--gold-dim);
+    }
+
+    .mushaf-word.type-bismillah {
+      display: block;
+      text-align: center;
+      width: 100%;
+      margin: 6px 0;
+    }
+
+    /* ── Tooltip ── */
+    .tooltip {
+      position: fixed;
+      background: #1e2530;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 6px 10px;
+      font-family: monospace;
+      font-size: 11px;
+      color: var(--text-dim);
+      pointer-events: none;
+      z-index: 1000;
+      opacity: 0;
+      transition: opacity 0.15s;
+      white-space: nowrap;
+      direction: ltr;
+    }
+
+    .tooltip.visible { opacity: 1; }
+    .tooltip strong { color: var(--gold); }
+
+    /* ── Loader ── */
+    #loader {
+      padding: 60px;
+      text-align: center;
+      direction: ltr;
+    }
+    .spinner {
+      width: 32px; height: 32px;
+      border: 2px solid var(--border);
+      border-top-color: var(--gold);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      margin: 0 auto 16px;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .loader-text { font-family: monospace; font-size: 12px; color: var(--text-dim); }
+
+    /* ── Error ── */
+    #error-msg {
+      display: none;
+      padding: 24px;
+      text-align: center;
+      color: #e05c5c;
+      font-family: monospace;
+      font-size: 12px;
+      direction: ltr;
+    }
+
+    /* ── Footer info ── */
+    .card-footer {
+      border-top: 1px solid var(--border);
+      padding: 12px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      direction: ltr;
+    }
+
+    .footer-stat {
+      font-family: monospace;
+      font-size: 11px;
+      color: var(--text-dim);
+    }
+    .footer-stat span { color: var(--green-light); }
+
+    /* ── JSON preview ── */
+    .json-section {
+      margin-top: 32px;
+    }
+
+    .section-label {
+      font-family: monospace;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--text-dim);
+      margin-bottom: 12px;
+      direction: ltr;
+    }
+
+    .json-box {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+      overflow: auto;
+      max-height: 280px;
+      direction: ltr;
+    }
+
+    pre {
+      font-family: 'Courier New', monospace;
+      font-size: 12px;
+      line-height: 1.6;
+      color: var(--text-dim);
+      white-space: pre;
+    }
+
+    .json-key   { color: #79b8ff; }
+    .json-str   { color: #9ecbff; }
+    .json-num   { color: var(--green-light); }
+    .json-bool  { color: #f97583; }
+    .json-null  { color: #6a737d; }
+
+    /* ── Info pills ── */
+    .info-pills {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 32px;
+      direction: ltr;
+    }
+
+    .pill {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 10px 16px;
+      font-family: monospace;
+      font-size: 12px;
+      flex: 1;
+      min-width: 140px;
+    }
+
+    .pill-label { color: var(--text-dim); margin-bottom: 4px; }
+    .pill-value { color: var(--gold); font-size: 18px; font-weight: bold; }
+
+    /* ── npm section ── */
+    .npm-box {
+      margin-top: 32px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      direction: ltr;
+    }
+
+    .npm-title {
+      font-family: monospace;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--text-dim);
+      margin-bottom: 16px;
+    }
+
+    .npm-cmd {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 10px 16px;
+      font-family: monospace;
+      font-size: 14px;
+      color: var(--green-light);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      transition: border-color 0.2s;
+    }
+
+    .npm-cmd:hover { border-color: var(--green-light); }
+    .npm-cmd .copy-hint { font-size: 10px; color: var(--text-dim); }
+    .npm-cmd.copied .copy-hint { color: var(--green-light); }
+
+    footer {
+      text-align: center;
+      margin-top: 48px;
+      font-family: monospace;
+      font-size: 11px;
+      color: var(--text-dim);
+      letter-spacing: 1px;
+      direction: ltr;
+    }
+
+    footer a { color: var(--gold-dim); text-decoration: none; }
+    footer a:hover { color: var(--gold); }
+  </style>
+</head>
+<body>
+<div class="shell">
+
+  <!-- Header -->
+  <header>
+    <div class="badge">QCF v4 · Hafs · Madinah Mushaf 1441 AH</div>
+    <h1>مُصْحَف المَدِينَة</h1>
+    <p class="subtitle">quran-qcf4 · live font rendering demo</p>
+  </header>
+
+  <!-- Controls -->
+  <div class="controls">
+    <label>PAGE</label>
+    <select id="page-select"></select>
+    <label>SIZE</label>
+    <input type="range" id="font-size" min="18" max="48" value="28" step="2" />
+    <span class="size-display" id="size-display">28px</span>
+  </div>
+
+  <!-- Mushaf card -->
+  <div class="mushaf-card">
+    <div class="card-topbar">
+      <div class="dots"><div class="dot"></div><div class="dot"></div><div class="dot"></div></div>
+      <span class="card-title">mushaf renderer</span>
+      <span class="page-badge" id="page-label">page 001</span>
+    </div>
+    <div id="page-render">
+      <div id="loader">
+        <div class="spinner"></div>
+        <div class="loader-text">Loading page data…</div>
+      </div>
+      <div id="error-msg">⚠ Could not load page data. Make sure you're serving this file from your repo root.</div>
+    </div>
+    <div class="card-footer">
+      <span class="footer-stat">lines: <span id="stat-lines">—</span></span>
+      <span class="footer-stat">words: <span id="stat-words">—</span></span>
+      <span class="footer-stat">font: <span id="stat-font">—</span></span>
+    </div>
+  </div>
+
+  <!-- JSON preview -->
+  <div class="json-section">
+    <div class="section-label">raw json · first line sample</div>
+    <div class="json-box"><pre id="json-preview">…</pre></div>
+  </div>
+
+  <!-- Info pills -->
+  <div class="info-pills">
+    <div class="pill">
+      <div class="pill-label">Total Pages</div>
+      <div class="pill-value">604</div>
+    </div>
+    <div class="pill">
+      <div class="pill-label">Font Files</div>
+      <div class="pill-value">47</div>
+    </div>
+    <div class="pill">
+      <div class="pill-label">Chapters</div>
+      <div class="pill-value">114</div>
+    </div>
+    <div class="pill">
+      <div class="pill-label">Verses</div>
+      <div class="pill-value">6,236</div>
+    </div>
+  </div>
+
+  <!-- npm install -->
+  <div class="npm-box">
+    <div class="npm-title">Install via npm</div>
+    <div class="npm-cmd" id="npm-cmd" onclick="copyNpm()">
+      <span>npm install quran-qcf4</span>
+      <span class="copy-hint" id="copy-hint">click to copy</span>
+    </div>
+  </div>
+
+  <footer>
+    <p>
+      Fonts by <a href="https://t.me/quranfont" target="_blank">Ahmad ElGharib</a> ·
+      Calligraphy by Uthman Taha ·
+      Produced by <a href="https://qurancomplex.gov.sa" target="_blank">King Fahd Complex</a>
+    </p>
+    <p style="margin-top:6px;">
+      <a href="https://github.com/MohamadHajjRabee/quran-qcf4" target="_blank">github.com/MohamadHajjRabee/quran-qcf4</a>
+    </p>
+  </footer>
+</div>
+
+<!-- Tooltip -->
+<div class="tooltip" id="tooltip"></div>
+
+<script>
+  const CDN_FONTS = "https://cdn.jsdelivr.net/gh/MohamadHajjRabee/quran-qcf4@main";
+  const CDN_DATA  = "https://raw.githubusercontent.com/MohamadHajjRabee/quran-qcf4/main";
+  const loadedFonts = new Set();
+  let currentPageData = null;
+
+  // Populate page select (1–604)
+  const sel = document.getElementById("page-select");
+  for (let i = 1; i <= 604; i++) {
+    const o = document.createElement("option");
+    o.value = i;
+    o.textContent = String(i).padStart(3, "0");
+    sel.appendChild(o);
+  }
+
+  sel.addEventListener("change", () => loadPage(parseInt(sel.value)));
+
+  document.getElementById("font-size").addEventListener("input", function() {
+    document.getElementById("size-display").textContent = this.value + "px";
+    if (currentPageData) renderPage(currentPageData);
+  });
+
+  async function loadFont(fontName) {
+    if (loadedFonts.has(fontName)) return;
+    // QCF4_QBSML has no _W suffix; all Hafs fonts do
+    const file = fontName === "QCF4_QBSML" ? `${fontName}.woff2` : `${fontName}_W.woff2`;
+    const url = `${CDN_FONTS}/fonts-woff2/${file}`;
+    const ff = new FontFace(fontName, `url(${url})`);
+    try {
+      await ff.load();
+      document.fonts.add(ff);
+      loadedFonts.add(fontName);
+    } catch(e) {
+      console.warn("Font load failed:", fontName, e);
+    }
+  }
+
+  async function loadPage(num) {
+    const padded = String(num).padStart(3, "0");
+    document.getElementById("page-label").textContent = `page ${padded}`;
+    document.getElementById("loader").style.display = "block";
+    document.getElementById("error-msg").style.display = "none";
+
+    // Clear previous render
+    const render = document.getElementById("page-render");
+    [...render.children].forEach(c => {
+      if (c.id !== "loader" && c.id !== "error-msg") c.remove();
+    });
+
+    document.getElementById("stat-lines").textContent = "—";
+    document.getElementById("stat-words").textContent = "—";
+    document.getElementById("stat-font").textContent = "—";
+
+    try {
+      const res = await fetch(`${CDN_DATA}/pages/${padded}.json`);
+      if (!res.ok) throw new Error("fetch failed");
+      const data = await res.json();
+      currentPageData = data;
+      document.getElementById("loader").style.display = "none";
+      renderPage(data);
+    } catch(e) {
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("error-msg").style.display = "block";
+    }
+  }
+
+  async function renderPage(data) {
+    const render = document.getElementById("page-render");
+    const fontSize = document.getElementById("font-size").value;
+
+    // Clear
+    [...render.children].forEach(c => {
+      if (c.id !== "loader" && c.id !== "error-msg") c.remove();
+    });
+
+    // Load fonts needed
+    const fontsNeeded = new Set();
+    fontsNeeded.add("QCF4_QBSML");
+    if (data.font) fontsNeeded.add(data.font);
+    data.lines.forEach(line => {
+      line.words.forEach(w => { if (w.font) fontsNeeded.add(w.font); });
+    });
+    await Promise.all([...fontsNeeded].map(loadFont));
+
+    let totalWords = 0;
+
+    data.lines.forEach(line => {
+      const row = document.createElement("div");
+      row.className = "mushaf-line";
+
+      line.words.forEach(word => {
+        const span = document.createElement("span");
+        span.className = `mushaf-word type-${word.type}`;
+        span.textContent = word.char;
+        span.style.fontFamily = `'${word.font}'`;
+        span.style.fontSize = `${fontSize}px`;
+
+        // Tooltip
+        span.addEventListener("mousemove", (e) => {
+          const t = document.getElementById("tooltip");
+          let info = `type: <strong>${word.type}</strong>`;
+          if (word.verse_key) info += ` · verse: <strong>${word.verse_key}</strong>`;
+          if (word.text) info += ` · <strong>${word.text}</strong>`;
+          t.innerHTML = info;
+          t.style.left = (e.clientX + 12) + "px";
+          t.style.top  = (e.clientY + 12) + "px";
+          t.classList.add("visible");
+        });
+        span.addEventListener("mouseleave", () => {
+          document.getElementById("tooltip").classList.remove("visible");
+        });
+
+        row.appendChild(span);
+        totalWords++;
+      });
+
+      render.appendChild(row);
+    });
+
+    // Stats
+    document.getElementById("stat-lines").textContent = data.lines.length;
+    document.getElementById("stat-words").textContent = totalWords;
+    document.getElementById("stat-font").textContent = data.font || "—";
+
+    // JSON preview
+    const sample = data.lines[0];
+    document.getElementById("json-preview").innerHTML = syntaxHighlight(
+      JSON.stringify({ page: data.page, font: data.font, line_1: sample }, null, 2)
+    );
+  }
+
+  function syntaxHighlight(json) {
+    return json
+      .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+      .replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, (match) => {
+        let cls = 'json-num';
+        if (/^"/.test(match)) cls = /:$/.test(match) ? 'json-key' : 'json-str';
+        else if (/true|false/.test(match)) cls = 'json-bool';
+        else if (/null/.test(match)) cls = 'json-null';
+        return `<span class="${cls}">${match}</span>`;
+      });
+  }
+
+  function copyNpm() {
+    navigator.clipboard.writeText("npm install quran-qcf4").then(() => {
+      const el = document.getElementById("copy-hint");
+      const cmd = document.getElementById("npm-cmd");
+      el.textContent = "✓ copied!";
+      cmd.classList.add("copied");
+      setTimeout(() => {
+        el.textContent = "click to copy";
+        cmd.classList.remove("copied");
+      }, 2000);
+    });
+  }
+
+  // Load page 1 on start
+  loadPage(1);
+</script>
+</body>
+</html>
