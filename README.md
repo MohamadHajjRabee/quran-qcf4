@@ -1,5 +1,11 @@
 # QCF4 Quran Database
 
+[![npm](https://img.shields.io/npm/v/quran-qcf4?color=c9a84c&label=npm)](https://www.npmjs.com/package/quran-qcf4)
+[![Live Demo](https://img.shields.io/badge/demo-live-2ecc8a)](https://mohamadhajjrabee.github.io/quran-qcf4/demo.html)
+[![License](https://img.shields.io/badge/license-see%20repo-lightgrey)](https://github.com/MohamadHajjRabee/quran-qcf4)
+
+> **[▶ Live Demo](https://mohamadhajjrabee.github.io/quran-qcf4/demo.html)** · Renders any Mushaf page in the browser using QCF4 fonts via CDN.
+
 A developer-friendly Quran database using **QCF v4** (Quran Complex Font, version 4) glyph rendering for the **Hafs** recitation.
 
 ## About QCF4
@@ -175,6 +181,29 @@ span.textContent = word.char;
 ### 3. Layout
 
 Words are organized by lines as they appear on the physical Mushaf page. Render each line as a row (RTL direction), and each word as an inline element within that row.
+
+## CDN Usage (No Install Required)
+
+You can use the data and fonts directly via jsDelivr — no npm install needed:
+
+```html
+<!-- Load a font -->
+<style>
+  @font-face {
+    font-family: "QCF4_Hafs_01";
+    src: url("https://cdn.jsdelivr.net/gh/MohamadHajjRabee/quran-qcf4@main/fonts-woff2/QCF4_Hafs_01_W.woff2");
+  }
+</style>
+```
+
+```js
+// Fetch page data
+const page = await fetch(
+  "https://raw.githubusercontent.com/MohamadHajjRabee/quran-qcf4/main/pages/001.json"
+).then(r => r.json());
+```
+
+> **Note:** Use `raw.githubusercontent.com` for JSON data (always up to date) and `cdn.jsdelivr.net` for font files (cached for performance).
 
 ## Index (`index.json`)
 
