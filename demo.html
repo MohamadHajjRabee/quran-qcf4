@@ -131,13 +131,6 @@
       border-color: var(--gold-dim);
     }
 
-    .size-display {
-      font-family: monospace;
-      font-size: 12px;
-      color: var(--gold);
-      min-width: 36px;
-    }
-
     /* ── Mushaf card ── */
     .mushaf-card {
       background: var(--surface);
@@ -213,6 +206,7 @@
       padding: 0 1px;
       border-radius: 3px;
       line-height: 1.9;
+      font-size: clamp(1em, 5vw, 1.75em);
     }
 
     .mushaf-word:hover {
@@ -226,7 +220,7 @@
       text-align: center;
       width: 100%;
       margin: 8px 0;
-      font-size: 2em !important;
+      font-size: clamp(1.2em, 5vw, 2em);
     }
 
     .mushaf-word.type-end {
@@ -418,6 +412,18 @@
 
     footer a { color: var(--gold-dim); text-decoration: none; }
     footer a:hover { color: var(--gold); }
+
+    /* ── Mobile ── */
+    @media (max-width: 600px) {
+      .shell { padding: 28px 12px 60px; }
+      #page-render { padding: 20px 12px; }
+      .controls { gap: 8px; }
+      .card-title { display: none; }
+      .info-pills { gap: 8px; }
+      .pill { min-width: 100px; padding: 8px 12px; }
+      .pill-value { font-size: 15px; }
+      .json-section { display: none; }
+    }
   </style>
 </head>
 <body>
@@ -434,9 +440,6 @@
   <div class="controls">
     <label>PAGE</label>
     <select id="page-select"></select>
-    <label>SIZE</label>
-    <input type="range" id="font-size" min="18" max="48" value="28" step="2" />
-    <span class="size-display" id="size-display">28px</span>
   </div>
 
   <!-- Mushaf card -->
@@ -493,16 +496,27 @@
       <span>npm install quran-qcf4</span>
       <span class="copy-hint" id="copy-hint">click to copy</span>
     </div>
+    <div style="margin-top:12px; font-family:monospace; font-size:11px; color:var(--text-dim);">
+      Also available on
+      <a href="https://huggingface.co/datasets/MohamadHajjRabee/quran-qcf4" target="_blank" style="color:var(--gold); text-decoration:none;">🤗 Hugging Face</a>
+    </div>
   </div>
 
   <footer>
     <p>
+      Built by <a href="https://github.com/MohamadHajjRabee" target="_blank">Mohamad Hajj Rabee</a>
+    </p>
+    <p style="margin-top:6px;">
       Fonts by <a href="https://t.me/quranfont" target="_blank">Ahmad ElGharib</a> ·
       Calligraphy by Uthman Taha ·
       Produced by <a href="https://qurancomplex.gov.sa" target="_blank">King Fahd Complex</a>
     </p>
-    <p style="margin-top:6px;">
-      <a href="https://github.com/MohamadHajjRabee/quran-qcf4" target="_blank">github.com/MohamadHajjRabee/quran-qcf4</a>
+    <p style="margin-top:10px;">
+      <a href="https://github.com/MohamadHajjRabee/quran-qcf4" target="_blank">GitHub</a>
+      &nbsp;·&nbsp;
+      <a href="https://www.npmjs.com/package/quran-qcf4" target="_blank">npm</a>
+      &nbsp;·&nbsp;
+      <a href="https://huggingface.co/datasets/MohamadHajjRabee/quran-qcf4" target="_blank">Hugging Face</a>
     </p>
   </footer>
 </div>
@@ -526,11 +540,6 @@
   }
 
   sel.addEventListener("change", () => loadPage(parseInt(sel.value)));
-
-  document.getElementById("font-size").addEventListener("input", function() {
-    document.getElementById("size-display").textContent = this.value + "px";
-    if (currentPageData) renderPage(currentPageData);
-  });
 
   async function loadFont(fontName) {
     if (loadedFonts.has(fontName)) return;
@@ -578,7 +587,6 @@
 
   async function renderPage(data) {
     const render = document.getElementById("page-render");
-    const fontSize = document.getElementById("font-size").value;
 
     // Clear
     [...render.children].forEach(c => {
@@ -605,7 +613,6 @@
         span.className = `mushaf-word type-${word.type}`;
         span.textContent = word.char;
         span.style.fontFamily = `'${word.font}'`;
-        span.style.fontSize = `${fontSize}px`;
 
         // Tooltip
         span.addEventListener("mousemove", (e) => {
